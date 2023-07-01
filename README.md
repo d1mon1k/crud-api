@@ -1,1 +1,1 @@
-# crud-api
+# Simple CRUD api.This project is part of the online courses offered by RS School and focuses on teaching the basics of Node.js.
