@@ -5,7 +5,7 @@ import { handleRoute } from './server/handle-route';
 dotenv.config();
 
 const app = http.createServer((request, response) => {
-    const { url } = request;
+    const { url, method } = request;
     const body: Buffer[] = [];
 
     request.on('error', (e) => {
@@ -17,11 +17,15 @@ const app = http.createServer((request, response) => {
     });
 
     request.on('end', async () => {
-        const convertedBody = Buffer.concat(body).toString();
-        const { statusCode, message } = handleRoute(url, convertedBody);
+        if (url && method) {
+            const data = Buffer.concat(body).toString();
+            const requestData = { data, url, method };
 
-        response.statusCode = statusCode;
-        response.end(JSON.stringify(message));
+            const { statusCode, message } = handleRoute(requestData);
+
+            response.statusCode = statusCode;
+            response.end(JSON.stringify(message));
+        }
     });
 });
 

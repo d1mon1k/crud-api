@@ -1,5 +1,5 @@
-import userDatabase from '../../repositories/userDatabase';
 import { STATUS_CODES } from '../../constants/status-codes';
+import userDatabase from '../../repositories/user-database';
 
 export const getUsers = () => {
     return {
