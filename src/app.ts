@@ -1,16 +1,14 @@
 import http from 'http';
-import userDatabase from './repositories/userDatabase';
 import dotenv from 'dotenv';
-import { TUser } from './types';
+import { handleRoute } from './server/handle-route';
 
 dotenv.config();
 
 const app = http.createServer((request, response) => {
-    const { headers, method, url } = request;
+    const { url } = request;
     const body: Buffer[] = [];
 
     request.on('error', (e) => {
-        // eslint-disable-next-line no-console
         console.error(e);
     });
 
@@ -19,12 +17,12 @@ const app = http.createServer((request, response) => {
     });
 
     request.on('end', async () => {
-        const data: TUser = JSON.parse(Buffer.concat(body).toString());
+        const convertedBody = Buffer.concat(body).toString();
+        const { statusCode, message } = handleRoute(url, convertedBody);
 
-        await userDatabase.setUser(data);
+        response.statusCode = statusCode;
+        response.end(JSON.stringify(message));
     });
-
-    response.end('<h1>hello</h1>');
 });
 
 app.listen(process.env.PORT || 4000);
