@@ -18,9 +18,11 @@ class UserDatabase {
     }
 
     public async setUser(user: TUser): Promise<void> {
-        this.database[user.id] = user;
+        try {
+            this.database[user.id] = user;
 
-        await recordDatabase(this.database);
+            await recordDatabase(this.database);
+        } catch {}
     }
 }
 

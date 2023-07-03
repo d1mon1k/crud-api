@@ -1,9 +1,11 @@
 import { USERS_ROUTES } from '../constants/routes';
 import { getUsers } from './controllers/get-users';
 import { STATUS_CODES } from '../constants/status-codes';
-import { getUserById } from './controllers/get-user-by-id';
 import { HTTP_METHODS } from '../constants/http-methods';
 import { mapUrls } from '../utils/map-urls';
+import { createUser } from './controllers/create-user';
+import { TUser } from '../types';
+import { getUserById } from './controllers/get-user-by-id';
 import { getUrlPayload } from '../utils/get-url-payload';
 
 type THandleRouteOutput = {
@@ -17,8 +19,9 @@ type TRequestData = {
     method: string;
 };
 
-export const handleRoute = (requestData: TRequestData): THandleRouteOutput => {
-    const { data, url, method } = requestData;
+export const handleRoute = async (requestData: TRequestData): Promise<THandleRouteOutput> => {
+    const { url, method } = requestData;
+    const data = JSON.parse(requestData.data || '{}');
 
     if (method === HTTP_METHODS.GET && mapUrls(USERS_ROUTES.GET_USERS, url)) {
         return getUsers();
@@ -29,7 +32,7 @@ export const handleRoute = (requestData: TRequestData): THandleRouteOutput => {
     }
 
     if (method === HTTP_METHODS.POST && mapUrls(USERS_ROUTES.ADD_USER, url)) {
-        return getUserById(data);
+        return await createUser(data as Omit<TUser, 'id'>);
     }
 
     if (method === HTTP_METHODS.PUT && mapUrls(USERS_ROUTES.UPDATE_USER, url)) {
