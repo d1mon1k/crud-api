@@ -1,1 +1,119 @@
-{"854c6bd7-a5b5-437a-8d8e-067c29c6634b":{"id":"854c6bd7-a5b5-437a-8d8e-067c29c6634b","username":"John Doe","age":25,"hobbies":["reading","gaming"]},"e2c25ea6-2c6b-4a6e-8c3d-bb5a0b299738":{"id":"e2c25ea6-2c6b-4a6e-8c3d-bb5a0b299738","username":"Jane Smith","age":30,"hobbies":["hiking","painting"]},"b85ed8e7-74c9-46b1-92fc-b75ad831bbaf":{"id":"b85ed8e7-74c9-46b1-92fc-b75ad831bbaf","username":"Mike Jones","age":22,"hobbies":["photography","cooking"]},"9e8337af-8f59-4c2d-879d-5e3a259a3d2a":{"id":"9e8337af-8f59-4c2d-879d-5e3a259a3d2a","username":"Emma Wilson","age":28,"hobbies":["running","music"]},"f7e24b8b-119d-45ff-b537-06b8d5a74399":{"id":"f7e24b8b-119d-45ff-b537-06b8d5a74399","username":"Alex Brown","age":35,"hobbies":["dancing","gardening"]},"39ff86f2-ff07-4ae7-9abf-00cdd5048e66":{"id":"39ff86f2-ff07-4ae7-9abf-00cdd5048e66","username":"Sarah Johnson","age":27,"hobbies":["yoga","movies"]},"25373f96-8b34-4b7f-9c9a-7710ee0416a3":{"id":"25373f96-8b34-4b7f-9c9a-7710ee0416a3","username":"Peter Smith","age":32,"hobbies":["traveling","coding"]},"7df7dd38-6007-46f6-a9ce-d2de6492c92c":{"id":"7df7dd38-6007-46f6-a9ce-d2de6492c92c","username":"Lisa Walker","age":29,"hobbies":["painting","reading"]},"4e17e6cd-1486-4417-9a15-6347c8209e4c":{"id":"4e17e6cd-1486-4417-9a15-6347c8209e4c","username":"Tom Jackson","age":31,"hobbies":["gaming","sports"]},"2153809d-69cc-4f4c-bf34-24e0922e309f":{"id":"2153809d-69cc-4f4c-bf34-24e0922e309f","username":"Emily White","age":26,"hobbies":["cooking","photography"]},"c4ad3710-a221-4f26-ac03-7e73e08a9b5b":{"id":"c4ad3710-a221-4f26-ac03-7e73e08a9b5b","username":"Artsiom","age":25,"hobbies":["gym","node.js"]},"cf8355e8-8c0c-442e-a121-b54b46b75660":{"id":"cf8355e8-8c0c-442e-a121-b54b46b75660","username":"Artsiom","age":25,"hobbies":["gym","node.js"]},"f7b27fb6-5731-4dc2-8a57-19cbfb707908":{"id":"f7b27fb6-5731-4dc2-8a57-19cbfb707908","username":"Kirill","age":24,"hobbies":["gym","cook"]},"6f4775d8-880d-49de-b27b-bda2b01297ea":{"id":"6f4775d8-880d-49de-b27b-bda2b01297ea","username":"Vadim Novik","age":25,"hobbies":["dota2"]}}
+{
+  "854c6bd7-a5b5-437a-8d8e-067c29c6634b": {
+    "id": "854c6bd7-a5b5-437a-8d8e-067c29c6634b",
+    "username": "John Doe",
+    "age": 25,
+    "hobbies": [
+      "reading",
+      "gaming"
+    ]
+  },
+  "e2c25ea6-2c6b-4a6e-8c3d-bb5a0b299738": {
+    "id": "e2c25ea6-2c6b-4a6e-8c3d-bb5a0b299738",
+    "username": "Jane Smith",
+    "age": 30,
+    "hobbies": [
+      "hiking",
+      "painting"
+    ]
+  },
+  "b85ed8e7-74c9-46b1-92fc-b75ad831bbaf": {
+    "id": "b85ed8e7-74c9-46b1-92fc-b75ad831bbaf",
+    "username": "Mike Jones",
+    "age": 22,
+    "hobbies": [
+      "photography",
+      "cooking"
+    ]
+  },
+  "9e8337af-8f59-4c2d-879d-5e3a259a3d2a": {
+    "id": "9e8337af-8f59-4c2d-879d-5e3a259a3d2a",
+    "username": "Emma Wilson",
+    "age": 28,
+    "hobbies": [
+      "running",
+      "music"
+    ]
+  },
+  "f7e24b8b-119d-45ff-b537-06b8d5a74399": {
+    "id": "f7e24b8b-119d-45ff-b537-06b8d5a74399",
+    "username": "Alex Brown",
+    "age": 35,
+    "hobbies": [
+      "dancing",
+      "gardening"
+    ]
+  },
+  "39ff86f2-ff07-4ae7-9abf-00cdd5048e66": {
+    "id": "39ff86f2-ff07-4ae7-9abf-00cdd5048e66",
+    "username": "Sarah Johnson",
+    "age": 27,
+    "hobbies": [
+      "yoga",
+      "movies"
+    ]
+  },
+  "25373f96-8b34-4b7f-9c9a-7710ee0416a3": {
+    "id": "25373f96-8b34-4b7f-9c9a-7710ee0416a3",
+    "username": "Peter Smith",
+    "age": 32,
+    "hobbies": [
+      "traveling",
+      "coding"
+    ]
+  },
+  "7df7dd38-6007-46f6-a9ce-d2de6492c92c": {
+    "id": "7df7dd38-6007-46f6-a9ce-d2de6492c92c",
+    "username": "Lisa Walker",
+    "age": 29,
+    "hobbies": [
+      "painting",
+      "reading"
+    ]
+  },
+  "4e17e6cd-1486-4417-9a15-6347c8209e4c": {
+    "id": "4e17e6cd-1486-4417-9a15-6347c8209e4c",
+    "username": "Tom Jackson",
+    "age": 31,
+    "hobbies": [
+      "gaming",
+      "sports"
+    ]
+  },
+  "2153809d-69cc-4f4c-bf34-24e0922e309f": {
+    "id": "2153809d-69cc-4f4c-bf34-24e0922e309f",
+    "username": "Emily White",
+    "age": 26,
+    "hobbies": [
+      "cooking",
+      "photography"
+    ]
+  },
+  "c4ad3710-a221-4f26-ac03-7e73e08a9b5b": {
+    "id": "c4ad3710-a221-4f26-ac03-7e73e08a9b5b",
+    "username": "Artsiom",
+    "age": 25,
+    "hobbies": [
+      "gym",
+      "node.js"
+    ]
+  },
+  "cf8355e8-8c0c-442e-a121-b54b46b75660": {
+    "id": "cf8355e8-8c0c-442e-a121-b54b46b75660",
+    "username": "Artsiom",
+    "age": 25,
+    "hobbies": [
+      "gym",
+      "node.js"
+    ]
+  },
+  "f7b27fb6-5731-4dc2-8a57-19cbfb707908": {
+    "id": "f7b27fb6-5731-4dc2-8a57-19cbfb707908",
+    "username": "Kirill",
+    "age": 24,
+    "hobbies": [
+      "gym",
+      "cook"
+    ]
+  }
+}

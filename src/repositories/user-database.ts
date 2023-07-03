@@ -24,6 +24,14 @@ class UserDatabase {
             await recordDatabase(this.database);
         } catch {}
     }
+
+    public async deleteUser(id: string): Promise<void> {
+        try {
+            delete this.database[id];
+
+            await recordDatabase(this.database);
+        } catch {}
+    }
 }
 
 const userDatabase = new UserDatabase();

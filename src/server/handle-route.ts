@@ -8,6 +8,7 @@ import { TUser } from '../types';
 import { getUserById } from './controllers/get-user-by-id';
 import { getUrlPayload } from '../utils/get-url-payload';
 import { updateUser } from './controllers/update-user';
+import { deleteUser } from './controllers/delete-user';
 
 type THandleRouteOutput = {
     statusCode: STATUS_CODES;
@@ -42,7 +43,7 @@ export const handleRoute = async (requestData: TRequestData): Promise<THandleRou
 
     // prettier-ignore
     if (method === HTTP_METHODS.DELETE && mapUrls(USERS_ROUTES.DELETE_USER, url)) {
-        return getUsers();
+        return deleteUser(getUrlPayload(USERS_ROUTES.DELETE_USER, url));
     }
 
     return getUsers();
