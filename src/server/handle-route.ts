@@ -38,13 +38,16 @@ export const handleRoute = async (requestData: TRequestData): Promise<THandleRou
     }
 
     if (method === HTTP_METHODS.PUT && mapUrls(USERS_ROUTES.UPDATE_USER, url)) {
-        return updateUser(getUrlPayload(USERS_ROUTES.UPDATE_USER, url), data);
+        return await updateUser(getUrlPayload(USERS_ROUTES.UPDATE_USER, url), data);
     }
 
     // prettier-ignore
     if (method === HTTP_METHODS.DELETE && mapUrls(USERS_ROUTES.DELETE_USER, url)) {
-        return deleteUser(getUrlPayload(USERS_ROUTES.DELETE_USER, url));
+        return await deleteUser(getUrlPayload(USERS_ROUTES.DELETE_USER, url));
     }
 
-    return getUsers();
+    return {
+        statusCode: STATUS_CODES.NOT_FOUND,
+        message: 'The requested resource could not be found',
+    };
 };

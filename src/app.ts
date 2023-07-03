@@ -6,7 +6,7 @@ import { STATUS_CODES } from './constants/status-codes';
 dotenv.config();
 
 const app = http.createServer((request, response) => {
-    const { url, method, headers } = request;
+    const { url, method } = request;
     const body: Buffer[] = [];
 
     request.on('error', (e) => {
@@ -19,26 +19,22 @@ const app = http.createServer((request, response) => {
 
     request.on('end', async () => {
         try {
-            if (headers['content-type'] !== 'application/json') {
-                response.statusCode = STATUS_CODES.BAD_REQUEST;
-                response.end('Invalid Content-Type. Expected application/json.');
-            }
-
             if (url && method) {
                 const data = Buffer.concat(body).toString('utf-8');
                 const requestData = { data, url, method };
-
                 const { statusCode, message } = await handleRoute(requestData);
 
-                response.statusCode = statusCode;
                 response.setHeader('content-type', 'application/json');
+                response.statusCode = statusCode;
                 response.end(JSON.stringify(message));
             }
-        } catch (e) {
-            console.log(e);
-            response.end(JSON.stringify(e));
+        } catch {
+            const serverError = 'An internal server error occurred while processing your request';
+
+            response.statusCode = STATUS_CODES.SERVER_ERROR;
+            response.end(JSON.stringify(serverError));
         }
     });
 });
 
-app.listen(process.env.PORT || 4000);
+app.listen(process.env.PORT);
