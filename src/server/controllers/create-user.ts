@@ -5,12 +5,10 @@ import { assertModel } from '../../utils/assert-model';
 import { userModel } from '../models/user-model';
 import { v4 } from 'uuid';
 
+// prettier-ignore
 const messageMap = new Map([
-    [
-        STATUS_CODES.BAD_REQUEST,
-        'The request body is incomplete and does not contain the required fields or' +
-            ' contains fields with incorrect data types',
-    ],
+    [STATUS_CODES.BAD_REQUEST, 'The request body does not contain the required fields or' +
+            ' contains fields with incorrect data types'],
 ]);
 
 export const createUser = async (userData: Omit<TUser, 'id'>) => {

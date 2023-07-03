@@ -7,6 +7,7 @@ import { createUser } from './controllers/create-user';
 import { TUser } from '../types';
 import { getUserById } from './controllers/get-user-by-id';
 import { getUrlPayload } from '../utils/get-url-payload';
+import { updateUser } from './controllers/update-user';
 
 type THandleRouteOutput = {
     statusCode: STATUS_CODES;
@@ -36,7 +37,7 @@ export const handleRoute = async (requestData: TRequestData): Promise<THandleRou
     }
 
     if (method === HTTP_METHODS.PUT && mapUrls(USERS_ROUTES.UPDATE_USER, url)) {
-        return getUsers();
+        return updateUser(getUrlPayload(USERS_ROUTES.UPDATE_USER, url), data);
     }
 
     // prettier-ignore
